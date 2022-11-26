@@ -1,4 +1,8 @@
-import { createStore, combineReducers, applyMiddleware } from "redux";
+import {
+  configureStore,
+  combineReducers,
+  applyMiddleware,
+} from "@reduxjs/toolkit";
 import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
 import TodoReducer from "./reducers/TodoReducers";
@@ -11,7 +15,7 @@ const initialState = {};
 
 const middleware = [thunk];
 
-const store = createStore(
+const store = configureStore(
   reducer,
   initialState,
   composeWithDevTools(applyMiddleware(...middleware))

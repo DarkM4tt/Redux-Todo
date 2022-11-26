@@ -15,8 +15,6 @@ function App() {
     dispatch(AddTodoAction(todo));
   };
 
-  console.log(todo);
-
   return (
     <div className="App">
       <header className="App-header">
